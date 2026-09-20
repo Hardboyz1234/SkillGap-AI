@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  /* Base surfaces, darkest to lightest, sampled from the Figma design */
+  --color-bg: #060814;
+  --color-panel: #0d1024;
+  --color-panel-2: #10152d;
+  --color-card: #131a38;
+  --color-card-border: #232a4d;
+  --color-sidebar: #0c0f26;
+
+  /* Text */
+  --color-ink: #f3f5fb;
+  --color-ink-muted: #9098b8;
+  --color-ink-faint: #5b6284;
+
+  /* Accents */
+  --color-violet: #8b5cf6;
+  --color-violet-strong: #7c3aed;
+  --color-cyan: #22d3ee;
+  --color-amber: #f59e0b;
+  --color-emerald: #10b981;
+
+  --font-sans: "Space Grotesk", "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", "Inter", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: var(--color-violet);
+    color: white;
+  }
+
+  /* subtle scrollbar to match the dark UI */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #262c4d;
+    border-radius: 8px;
+  }
+}
+
+@layer utilities {
+  .glow-violet {
+    box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.25), 0 8px 30px -8px rgba(139, 92, 246, 0.45);
+  }
+  .card-surface {
+    background: var(--color-card);
+    border: 1px solid var(--color-card-border);
+  }
+}
