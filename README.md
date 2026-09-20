@@ -35,7 +35,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173, create an account, and run your first
+Open http://localhost:5173/auth, create an account, and run your first
 diagnostic.
 
 ## Tech stack
